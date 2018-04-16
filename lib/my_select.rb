@@ -7,7 +7,7 @@ def my_select(collection)
   #     i+=1
   #   end
   collection.each do |element|
-      selection << element if block.call(element) == true
+      selection << element if yield(element) == true
     end
   end
   selection
