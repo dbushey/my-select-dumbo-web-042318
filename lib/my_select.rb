@@ -6,7 +6,7 @@ def my_select(collection)
   #     selection << yield(collection[i])
   #     i+=1
   #   end
-  self.each do |element|
+  collection.each do |element|
       selection << element if block.call(element) == true
     end
   end
