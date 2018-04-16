@@ -9,6 +9,6 @@ def my_select(collection)
   collection.each do |element|
       selection << element if yield(element) == true
     end
-  end
+
   selection
 end
