@@ -1,10 +1,13 @@
 def my_select(collection)
-  i = 0
+  #i = 0
   selection = []
-  while i < collection.length
-    if collection[i]
-      selection << yield(collection[i])
-      i+=1
+  # while i < collection.length
+  #   if collection[i]
+  #     selection << yield(collection[i])
+  #     i+=1
+  #   end
+  self.each do |element|
+      selection << element if block.call(element) == true
     end
   end
   selection
