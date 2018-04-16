@@ -7,8 +7,3 @@ def my_select(collection)
   end
   selection
 end
-
-
-
-a = %w{ a b c d e f }
-a.select {|v| v =~ /[aeiou]/}   #=> ["a", "e"]
